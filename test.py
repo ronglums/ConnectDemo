@@ -1,4 +1,3 @@
-#%%
 import score
 import shutil
 from urllib.request import urlopen
