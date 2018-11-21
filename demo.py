@@ -59,8 +59,7 @@ def hyperparameter_tuning(ws,experiment):
                                                 max_concurrent_runs = 4)
 
     hd_run = experiment.submit(hyperdrive_run_config)
-    hd_run_id = hd_run.id
-    RunDetails(Run(experiment, hd_run_id)).show()
+    RunDetails(Run(experiment, hd_run.id)).show()
     return hd_run
 
 def retrieve_best_model(hd_run):
