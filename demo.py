@@ -65,14 +65,7 @@ def hyperparameter_tuning(ws,experiment):
 def retrieve_best_model(hd_run):
     # Retrieve the best run from the Hyperdrive run
     best_run = hd_run.get_best_run_by_primary_metric()
-    
-    # create a model folder in the current directory
-    os.makedirs('./model', exist_ok = True)
-    for f in best_run.get_file_names():
-        if f.startswith('outputs/model'):
-            output_file_path = os.path.join('./model', f.split('/')[-1])
-            print('Downloading from {} to {} ...'.format(f, output_file_path))
-            best_run.download_file(name = f, output_file_path = output_file_path)
+    model = best_run.register_model(model_name='pet-detector', model_path='outputs')  
 
 def train():
     inspect_data()

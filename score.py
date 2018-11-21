@@ -44,6 +44,7 @@ def run(raw_data):
     image_reader = tf.image.decode_jpeg(base64_bytes, channels=3, name='jpeg_reader')
     float_caster = tf.cast(image_reader, tf.float32)
     dims_expander = tf.expand_dims(float_caster, 0)
+    resized = tf.image.resize_bilinear(dims_expander,[224,224])
 
 
 

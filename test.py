@@ -1,3 +1,4 @@
+#%%
 import score
 import shutil
 from urllib.request import urlopen
@@ -8,7 +9,7 @@ import numpy as np
 from base64 import b64encode
 
 image_uri = 'http://jp8.r0tt.com/l_89cce6d0-f032-11e1-8ac2-33f655e00008.jpg'
-service_uri = 'http://104.211.38.248:80/score'
+service_uri = 'http://23.96.116.25:80/score'
 
 with urlopen(image_uri) as response:
     with open('temp.jpg', 'bw+') as f:
