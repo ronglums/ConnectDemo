@@ -1,3 +1,4 @@
+#%%
 import score
 import shutil
 from urllib.request import urlopen
@@ -7,7 +8,8 @@ import json
 import numpy as np
 from base64 import b64encode
 
-image_uri = 'http://jp8.r0tt.com/l_89cce6d0-f032-11e1-8ac2-33f655e00008.jpg'
+#image_uri = 'http://jp8.r0tt.com/l_89cce6d0-f032-11e1-8ac2-33f655e00008.jpg'
+image_uri = 'https://dm2301files.storage.live.com/y4m6wHcpjt7I-MnRZfL_bgxcr15ESNq_w0i3I6UTJ60hfk-BqL38oMVm1CsM2M09JkvG5zJYTC1onV3Dlrjuz2dbBGgtCObcjM0d8J08EfTAXGHYzWNzHYcYkFJWE5jiDKxRnS7XjhIULL9NkrXH5P4rqeNFWrmyDu8ZGSuTJ3wdpgT-hGEG_63A1BjGzJY2yY4uz2VZbf8pDQLlOY3C7RwOA/coco_dog.jpg?psid=1&width=1024&height=1024&cropMode=center'
 service_uri = 'http://23.96.116.25:80/score'
 
 with urlopen(image_uri) as response:
